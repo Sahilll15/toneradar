@@ -13,9 +13,11 @@ export const LIMITS = {
 } satisfies Record<string, Limit>;
 
 export function clientIp(req: Request) {
+  // The leftmost x-forwarded-for entry is client-supplied; x-real-ip and the last hop are set by the proxy.
+  const real = req.headers.get('x-real-ip');
+  if (real) return real.trim();
   const forwarded = req.headers.get('x-forwarded-for');
-  if (forwarded) return forwarded.split(',')[0].trim();
-  return req.headers.get('x-real-ip') ?? 'unknown';
+  return forwarded?.split(',').at(-1)?.trim() || 'unknown';
 }
 
 export function check(req: Request, name: keyof typeof LIMITS) {
