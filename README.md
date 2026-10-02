@@ -1,6 +1,26 @@
 # ToneRadar
 
+Check how a message will land before you send it.
+
+**Live demo:** https://toneradar.vercel.app
+
+![ToneRadar demo: the tone radar for a Slack draft and its rewrite, with the heat-marked message below](docs/demo.gif)
+
+## How it works
+
 Paste a message you are about to send and see how it will land before you hit send. Pick who it is for (manager, teammate, client or friend) and ToneRadar sends the message and that context to TypeSafe's Jev as state. Jev answers eight score questions about the whole message (warmth, clarity, confidence, urgency, politeness, passive-aggression, defensiveness, formality, each with five ordered criteria), a boolean on whether you will get the reply you want, and eight booleans per sentence such as "reads as passive-aggressive", "could be misread as angry", "hedges unnecessarily" and "is a clear ask". Jev only returns numbers. The radar chart, the heat-marked message, the verdict, the rewrite list and every line of copy are computed in `lib/tone.ts` from those numbers. You can also compare two drafts on one radar.
+
+## Screenshots
+
+![ToneRadar home: recipient picker, message box and sample drafts](docs/home.webp)
+
+![ToneRadar result: radar for two drafts, landing score and the sentences to rewrite first](docs/result.webp)
+
+A longer recording is in [docs/demo.mp4](docs/demo.mp4).
+
+## Stack
+
+Next.js 16 (App Router), React 19, Tailwind CSS v4, TypeScript and the Vercel AI SDK, deployed on Vercel. Jev calls go through Vercel AI Gateway and fall back to the TypeSafe API. Unit tests use the Node test runner.
 
 ## Run it
 
@@ -22,3 +42,7 @@ npm run build && npx next start -p 3101
 | `RATE_LIMIT_WINDOW_MS` | `3600000` | Rate limit window in milliseconds |
 
 Limits per request are two drafts, 8,000 characters each, and the first 20 sentences of each draft get scored.
+
+## Related
+
+Built alongside [Headline Arena](https://headline-arena-gamma.vercel.app), [FinePrint](https://fineprint-beta.vercel.app), [fallacy finder](https://fallacy-finder-nine.vercel.app) and [PitchPanel](https://pitchpanel.vercel.app), all on TypeSafe Jev. The first one was [JobFit](https://github.com/Sahilll15/jobfit).
