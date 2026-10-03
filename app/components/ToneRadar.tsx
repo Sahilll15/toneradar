@@ -33,7 +33,7 @@ const TIER_STYLE: Record<Tier, { ring: string; chip: string; text: string }> = {
   bad: { ring: '#c63e66', chip: 'bg-bad-soft text-bad', text: 'text-bad' },
 };
 
-export function ToneRadar() {
+export function ToneRadar({ children }: { children?: React.ReactNode }) {
   const [recipient, setRecipient] = useState<Recipient>('teammate');
   const [texts, setTexts] = useState(['', '']);
   const [compare, setCompare] = useState(false);
@@ -97,10 +97,12 @@ export function ToneRadar() {
         </p>
       </header>
 
-      <section className="card anim-rise p-5 sm:p-8">
+      <section className="card p-5 sm:p-8">
         <div className="mb-6 max-w-[620px]">
           <h1 className="font-display text-[30px] font-semibold leading-[1.05] tracking-tight sm:text-[40px]">
-            <span className="sr-only">ToneRadar message tone checker. </span>
+            <span className="mb-2 block font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-violet-deep">
+              Message tone checker
+            </span>
             How will this message land?
           </h1>
           <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">
@@ -248,9 +250,7 @@ export function ToneRadar() {
         )}
       </div>
 
-      <footer className="mt-16 text-center text-[12px] text-ink-faint">
-        ToneRadar asks Jev typed questions and turns the numbers into this page. Your text goes to Jev for scoring and is not stored here.
-      </footer>
+      {children}
     </main>
   );
 }

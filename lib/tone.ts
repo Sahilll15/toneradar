@@ -157,7 +157,7 @@ const TARGETS: Record<Recipient, { urgency: number; formality: number }> = {
   friend: { urgency: 0.2, formality: 0.15 },
 };
 
-const WEIGHTS: Record<Recipient, AxisValues> = {
+export const WEIGHTS: Record<Recipient, AxisValues> = {
   manager: { warmth: 0.8, clarity: 1.3, confidence: 1.1, urgency: 0.7, politeness: 1, passiveAggression: 1.4, defensiveness: 1.3, formality: 0.8 },
   teammate: { warmth: 1, clarity: 1.2, confidence: 0.8, urgency: 0.7, politeness: 0.9, passiveAggression: 1.5, defensiveness: 1, formality: 0.5 },
   client: { warmth: 0.9, clarity: 1.3, confidence: 1, urgency: 0.8, politeness: 1.3, passiveAggression: 1.5, defensiveness: 1.2, formality: 1 },
@@ -334,7 +334,7 @@ export function tierFor(score: number): Tier {
   return 'bad';
 }
 
-const TIER_HEADLINE: Record<Tier, string> = {
+export const TIER_HEADLINE: Record<Tier, string> = {
   good: 'Lands well',
   ok: 'Mostly fine, a few rough edges',
   risky: 'Might sting',
