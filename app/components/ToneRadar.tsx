@@ -100,6 +100,7 @@ export function ToneRadar() {
       <section className="card anim-rise p-5 sm:p-8">
         <div className="mb-6 max-w-[620px]">
           <h1 className="font-display text-[30px] font-semibold leading-[1.05] tracking-tight sm:text-[40px]">
+            <span className="sr-only">ToneRadar message tone checker. </span>
             How will this message land?
           </h1>
           <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">
