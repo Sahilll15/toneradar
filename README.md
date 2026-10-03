@@ -18,6 +18,18 @@ Paste a message you are about to send and see how it will land before you hit se
 
 A longer recording is in [docs/demo.mp4](docs/demo.mp4).
 
+## Architecture
+
+![ToneRadar architecture: the browser posts drafts to one route handler, which counts the request in Upstash Redis and scores it with TypeSafe Jev through Vercel AI Gateway, falling back to the direct TypeSafe API](docs/architecture.svg)
+
+1. The browser posts one or two drafts and the recipient to `POST /api/analyze`.
+2. The route validates the input, then takes a rate limit slot in Upstash Redis and answers 429 when the window is used up.
+3. It sends each draft and each sentence to Jev through Vercel AI Gateway (`typesafe-ai/jev`).
+4. Jev answers typed score and yes/no questions. If the Gateway fails, the same questions go straight to the TypeSafe API (dashed path).
+5. The route returns the numbers and the browser draws the radar, heat map and rewrite list from them in `lib/tone.ts`.
+
+**Why it is built this way.** The TypeSafe and Gateway keys stay on the server. Jev only returns numbers, and every verdict and line of copy is computed in code from them. The limit is counted in Redis before any paid call, so it holds across Vercel instances.
+
 ## Stack
 
 Next.js 16 (App Router), React 19, Tailwind CSS v4, TypeScript and the Vercel AI SDK, deployed on Vercel. Jev calls go through Vercel AI Gateway and fall back to the TypeSafe API. Unit tests use the Node test runner.

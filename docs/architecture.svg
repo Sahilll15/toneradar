@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="ToneRadar architecture">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#0969da"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8c959f"/></marker></defs>
+<rect x="0.5" y="0.5" width="1199" height="639" rx="16" fill="#ffffff" stroke="#e3e6ea"/>
+<text x="32" y="46" font-size="18" fill="#1f2328" text-anchor="start" font-weight="600">ToneRadar architecture</text>
+<text x="1168" y="46" font-size="12" fill="#57606a" text-anchor="end">Next.js 16 on Vercel, TypeSafe Jev via Vercel AI Gateway</text>
+<rect x="24" y="70" width="236" height="490" rx="14" fill="#eef4ff"/><text x="40" y="94" font-size="12" fill="#57606a" text-anchor="start" font-weight="600" letter-spacing="0.06em">CLIENT</text>
+<rect x="284" y="70" width="392" height="490" rx="14" fill="#f6f8fa"/><text x="300" y="94" font-size="12" fill="#57606a" text-anchor="start" font-weight="600" letter-spacing="0.06em">VERCEL</text>
+<rect x="700" y="70" width="476" height="300" rx="14" fill="#f5f0ff"/><text x="716" y="94" font-size="12" fill="#57606a" text-anchor="start" font-weight="600" letter-spacing="0.06em">EXTERNAL SERVICES</text>
+<rect x="700" y="390" width="476" height="170" rx="14" fill="#edf8f1"/><text x="716" y="414" font-size="12" fill="#57606a" text-anchor="start" font-weight="600" letter-spacing="0.06em">DATA</text>
+<rect x="106" y="246" width="72" height="72" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="120" y="265" width="44" height="34" rx="5" fill="#ffffff" stroke="#1f2328" stroke-width="2"/><path d="M120 275H164" stroke="#1f2328" stroke-width="2"/><circle cx="126" cy="270" r="1.6" fill="#1f2328"/><circle cx="132" cy="270" r="1.6" fill="#1f2328"/><circle cx="138" cy="270" r="1.6" fill="#1f2328"/><rect x="126" y="280" width="20" height="4" rx="2" fill="#0969da"/><rect x="126" y="288" width="32" height="4" rx="2" fill="#d0d7de"/>
+<text x="142" y="344" font-size="14" fill="#1f2328" text-anchor="middle">Browser</text>
+<text x="142" y="362" font-size="12" fill="#57606a" text-anchor="middle">React UI</text>
+<rect x="44" y="384" width="196" height="124" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<text x="58" y="406" font-size="11" fill="#57606a" text-anchor="start" font-weight="600" letter-spacing="0.06em">IN THE BROWSER</text>
+<circle cx="62" cy="426" r="2.5" fill="#0969da"/>
+<text x="72" y="430" font-size="12" fill="#1f2328" text-anchor="start">Recipient picker, 1 or 2 drafts</text>
+<circle cx="62" cy="448" r="2.5" fill="#0969da"/>
+<text x="72" y="452" font-size="12" fill="#1f2328" text-anchor="start">Radar chart from lib/tone.ts</text>
+<circle cx="62" cy="470" r="2.5" fill="#0969da"/>
+<text x="72" y="474" font-size="12" fill="#1f2328" text-anchor="start">Sentence heat map</text>
+<circle cx="62" cy="492" r="2.5" fill="#0969da"/>
+<text x="72" y="496" font-size="12" fill="#1f2328" text-anchor="start">Draft compare and rewrites</text>
+<rect x="444" y="96" width="72" height="72" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<path d="M480 116.6L500.0 151.4H460.0Z" fill="#1f2328"/>
+<text x="480" y="190" font-size="14" fill="#1f2328" text-anchor="middle">Vercel</text>
+<text x="480" y="208" font-size="12" fill="#57606a" text-anchor="middle">Next.js route handlers</text>
+<rect x="330" y="250" width="300" height="64" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="347" y="267" width="30" height="30" rx="7" fill="#ddf4ff" stroke="#0969da"/><text x="362" y="288" font-size="18" fill="#0969da" text-anchor="middle" font-weight="700" font-family="Georgia, serif">ƒ</text>
+<text x="390" y="278" font-size="14" fill="#1f2328" text-anchor="start" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">POST /api/analyze</text>
+<text x="390" y="297" font-size="12" fill="#57606a" text-anchor="start">validate, limit, score each draft</text>
+<rect x="330" y="440" width="300" height="64" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="347" y="457" width="30" height="30" rx="7" fill="#ddf4ff" stroke="#0969da"/><text x="362" y="478" font-size="18" fill="#0969da" text-anchor="middle" font-weight="700" font-family="Georgia, serif">ƒ</text>
+<text x="390" y="468" font-size="14" fill="#1f2328" text-anchor="start" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">app/server</text>
+<text x="390" y="487" font-size="12" fill="#57606a" text-anchor="start">ratelimit.ts + limiter.ts, jev.ts</text>
+<rect x="752" y="104" width="72" height="72" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<circle cx="788" cy="140" r="20" fill="#ffffff" stroke="#1f2328" stroke-width="2"/><path d="M788 133.3L798.0 150.7H778.0Z" fill="#1f2328"/><path d="M761 140H767M809 140H815" stroke="#1f2328" stroke-width="2"/>
+<text x="788" y="198" font-size="14" fill="#1f2328" text-anchor="middle">Vercel AI Gateway</text>
+<text x="788" y="214" font-size="12" fill="#57606a" text-anchor="middle">model typesafe-ai/jev</text>
+<rect x="752" y="236" width="72" height="72" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<polygon points="807.1,261.0 807.1,283.0 788.0,294.0 768.9,283.0 768.9,261.0 788.0,250.0" fill="#ffffff" stroke="#8250df" stroke-width="2"/><text x="788" y="276" font-size="11" fill="#8250df" text-anchor="middle" font-weight="700">API</text>
+<text x="788" y="328" font-size="14" fill="#1f2328" text-anchor="middle">TypeSafe API</text>
+<text x="788" y="344" font-size="12" fill="#57606a" text-anchor="middle">direct, fallback only</text>
+<rect x="1044" y="170" width="72" height="72" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<polygon points="1099.1,195.0 1099.1,217.0 1080.0,228.0 1060.9,217.0 1060.9,195.0 1080.0,184.0" fill="#fbefff" stroke="#8250df" stroke-width="2"/><path d="M1080 195Q1082 204 1091 206Q1082 208 1080 217Q1078 208 1069 206Q1078 204 1080 195Z" fill="#8250df"/>
+<text x="1080" y="264" font-size="14" fill="#1f2328" text-anchor="middle">TypeSafe Jev</text>
+<text x="1080" y="282" font-size="12" fill="#57606a" text-anchor="middle">jev-latest</text>
+<text x="1080" y="298" font-size="12" fill="#57606a" text-anchor="middle">2 calls + 1 per sentence</text>
+<rect x="800" y="410" width="72" height="72" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<path d="M816 430V462A20 6 0 0 0 856 462V430" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/><path d="M816 446A20 6 0 0 0 856 446" fill="none" stroke="#1a7f37" stroke-width="2"/><ellipse cx="836" cy="430" rx="20" ry="6" fill="#ffffff" stroke="#1a7f37" stroke-width="2"/>
+<text x="836" y="504" font-size="14" fill="#1f2328" text-anchor="middle">Upstash Redis</text>
+<text x="836" y="522" font-size="12" fill="#57606a" text-anchor="middle">rate limit counts</text>
+<text x="912" y="432" font-size="12" fill="#1f2328" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">rl:toneradar:&lt;bucket&gt;:&lt;ip&gt;</text>
+<text x="912" y="452" font-size="12" fill="#57606a" text-anchor="start">INCR + PEXPIRE in one EVAL</text>
+<text x="912" y="472" font-size="12" fill="#57606a" text-anchor="start">peek reads GET + PTTL</text>
+<text x="912" y="492" font-size="12" fill="#57606a" text-anchor="start">denies before any paid call</text>
+<path d="M178 266H328" fill="none" stroke="#0969da" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="253" cy="266" r="11" fill="#0969da"/><text x="253" y="270.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<path d="M630 300H655V446H798" fill="none" stroke="#0969da" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="655" cy="386" r="11" fill="#0969da"/><text x="655" y="390.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+<path d="M630 262H690V140H750" fill="none" stroke="#0969da" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="690" cy="200" r="11" fill="#0969da"/><text x="690" y="204.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
+<path d="M826 140H1010V190H1042" fill="none" stroke="#0969da" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="930" cy="140" r="11" fill="#0969da"/><text x="930" y="144.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">4</text>
+<path d="M630 282H720V272H750" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#g)"/>
+<path d="M826 272H1030V222H1042" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#g)"/>
+<path d="M328 300H180" fill="none" stroke="#0969da" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="253" cy="300" r="11" fill="#0969da"/><text x="253" y="304.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">5</text>
+<text x="253" y="330" font-size="12" fill="#57606a" text-anchor="middle">axis scores, sentence flags</text>
+<text x="930" y="126" font-size="12" fill="#57606a" text-anchor="middle">typed questions</text>
+<text x="930" y="290" font-size="12" fill="#57606a" text-anchor="middle">if the Gateway call fails</text>
+<path d="M32 600H72" stroke="#0969da" stroke-width="2" marker-end="url(#a)"/>
+<text x="82" y="604" font-size="12" fill="#57606a" text-anchor="start">Request path</text>
+<path d="M200 600H240" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#g)"/>
+<text x="250" y="604" font-size="12" fill="#57606a" text-anchor="start">Fallback or optional path</text>
+<circle cx="436" cy="600" r="11" fill="#0969da"/><text x="436" y="604.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<text x="454" y="604" font-size="12" fill="#57606a" text-anchor="start">Step, explained below the diagram</text>
+</svg>
